@@ -62,7 +62,52 @@
       <artifactId>flink-java</artifactId>
       <version>1.12.5</version>
     </dependency>
-
+    <dependency>
+        <groupId>org.slf4j</groupId>
+         <artifactId>slf4j-nop</artifactId>
+         <version>1.7.2</version>
+     </dependency>
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>RELEASE</version>
+      <scope>compile</scope>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.apache.flink/flink-table-api-java-bridge -->
+    <dependency>
+      <groupId>org.apache.flink</groupId>
+      <artifactId>flink-table-api-java-bridge_2.12</artifactId>
+      <version>1.12.5</version>
+      <scope>provided</scope>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.apache.flink/flink-table-api-java -->
+    <dependency>
+      <groupId>org.apache.flink</groupId>
+      <artifactId>flink-table-api-java</artifactId>
+      <version>1.12.5</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.apache.flink/flink-table-common -->
+    <dependency>
+      <groupId>org.apache.flink</groupId>
+      <artifactId>flink-table-common</artifactId>
+      <version>1.12.5</version>
+      <scope>provided</scope>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.apache.flink/flink-table-planner-blink -->
+    <dependency>
+      <groupId>org.apache.flink</groupId>
+      <artifactId>flink-table-planner-blink_2.12</artifactId>
+      <version>1.12.5</version>
+      <scope>provided</scope>
+    </dependency>
+ <!--连接器-->
+    <!-- https://mvnrepository.com/artifact/org.apache.flink/flink-connector-jdbc -->
+    <dependency>
+      <groupId>org.apache.flink</groupId>
+      <artifactId>flink-connector-jdbc_2.12</artifactId>
+      <version>1.12.1</version>
+      <scope>provided</scope>
+    </dependency>
 
   </dependencies>
 
@@ -110,5 +155,15 @@
         </plugin>
       </plugins>
     </pluginManagement>
+      <plugins>
+          <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-compiler-plugin</artifactId>
+              <configuration>
+                  <source>8</source>
+                  <target>8</target>
+              </configuration>
+          </plugin>
+      </plugins>
   </build>
 </project>
